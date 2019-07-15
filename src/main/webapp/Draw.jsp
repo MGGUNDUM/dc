@@ -20,6 +20,7 @@
 									</span>
 									<%
 										String msg = (String)request.getAttribute("card");
+										
 									%>
 									
 								</td>

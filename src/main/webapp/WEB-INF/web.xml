@@ -10,24 +10,20 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
+ <servlet>
     <description></description>
-    <display-name>test</display-name>
-    <servlet-name>test</servlet-name>
-    <servlet-class>cn.nmb.draw.test</servlet-class>
+    <display-name>DispatcherServlet</display-name>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:applicationContext.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>test</servlet-name>
-    <url-pattern>/test</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ActionServlet</display-name>
-    <servlet-name>ActionServlet</servlet-name>
-    <servlet-class>cn.nmb.draw.ActionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ActionServlet</servlet-name>
+    <servlet-name>DispatcherServlet</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 </web-app>
